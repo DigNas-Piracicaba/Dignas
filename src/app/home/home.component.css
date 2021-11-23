@@ -1,3 +1,46 @@
-html{
-    scroll-behavior: smooth;
+.btn-color{
+  background-color: #D77A4E;
+  color: cornsilk;
+}
+
+.txt-color{
+color: #716D87;
+}
+
+.contorno{
+width: 350px;
+height: 450px;
+
+border: 1px solid #716D87;
+box-sizing: border-box;
+border-radius: 2px;
+}
+
+.bg-contorno{
+width: 350px;
+height: 450px;
+margin-left: 15px;
+margin-top:-20px;
+/* orange clean */
+
+background: #FEE2CA;
+border-radius: 2px;
+}
+
+.img2{
+position: absolute;
+width: 330px;
+height: 310px;
+left: 35px;
+right: 25px;  
+top: 100px; 
+}
+
+.teste{
+width: 100px;
+height: 100px;
+/* orange clean */
+
+background: #FEE2CA;
+border-radius: 2px;
 }
