@@ -1,3 +1,4 @@
+<p>formulario-urbano works!</p>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="formulario.component.css" rel="stylesheet">
+    <link href="Forms.css" rel="stylesheet">
     <title>DigNas</title>
 </head>
 
@@ -18,11 +19,11 @@
         <header class="header">
             <h1>
                 DigNas
-            </h1><br/>
+            </h1>
             <p>
                 Preencha o formulário com as informações mais importantes
             </p>
-        </header>
+        </header><br/>
 
         <!--Início da implementação de scripts-->
 
@@ -45,53 +46,22 @@
 
         <!--Fim da implementação de scripts de hide and show options-->
 
-        <form action="http://localhost:3000/novoCadastro" method="post" class="form">
+        <form action="" class="form">
             <!--form engloba tudo-->
 
-            <div class="input-field" style = "float:left;">
+            <div class="input-field">
                 <!--Campo para Nome-->
                 <label for="nome">Nome</label><br/>
                 <input id="nome" type="text" name="nome" placeholder="Insira seu nome" required>
             </div>
 
-            <div class="input-field" style = "float:middle;">
-                <!--Campo para Data de Nascimento-->
-                <label for="dataNascimento">Data de Nascimento</label><br/>
-                <input id="dataNascimento" type="date" name="dataNascimento" placeholder="Insira sua data de nascimento" required>
-            </div>
-
-            <div class="input-field" style = "float:left;">
-                <!--Campo para gênero-->
-                <label for="genero">Gênero</label><br/>
-                <select name="genero" id="genero" placeholder="Selecione o gênero com o qual se identifica" onchange="showDiv('genero_outro', this)" required>
-                    <option disabled selected value>Selecione seu gênero</option>
-                    <option value="Homem">Homem</option>
-                    <option value="Mulher">Mulher</option>
-                    <option value="Outro">Outro</option>
-                    <option value="Prefiro_nao">Prefiro não responder</option>
-                </select>
-            </div>
-
             <div class="input-field">
-                <!--Campo para Etnia-->
-                <label for="etnia">Cor ou Raça</label><br/>
-                <select name="etnia" id="etnia" placeholder="Selecione sua etnia" required>
-                    <option disabled selected value>Selecione sua etnia</option>
-                    <option value="Branca">Branca</option>
-                    <option value="Preta">Preta</option>
-                    <option value="Parda">Parda</option>
-                    <option value="Indígena">Indígena</option>
-                    <option value="Amarela">Amarela</option>
-                </select>
-            </div>
-
-            <div class="input-field" >
                 <!--Campo para CEP-->
                 <label for="cep">CEP</label><br/>
                 <input id="cep" type="number" name="cep" placeholder="Insira seu CEP" required/>
             </div>
 
-            <div class="input-field" style = "float:left;">
+            <div class="input-field">
                 <!--Campo para Rua-->
                 <label for="rua">Rua</label><br/>
                 <input id="logradouro" type="text" name="logradouro" placeholder="Insira sua rua" required/>
@@ -174,6 +144,12 @@
                 <input id="email" type="email" name="email" placeholder="Insira seu e-mail" required>
             </div>
 
+            <div class="input-field">
+                <!--Campo para Data de Nascimento-->
+                <label for="dataNascimento">Data de Nascimento</label><br/>
+                <input id="dataNascimento" type="date" name="dataNascimento" placeholder="Insira sua data de nascimento" required>
+            </div>
+
             <!--Início do script para recuperar as informações para preenchimento automátioco pelo CEP-->
 
             <script type="text/javascript">
@@ -207,10 +183,35 @@
 
             <!--Fim do script para recuperar as informações para preenchimento automátioco pelo CEP-->
 
+            <div class="input-field">
+                <!--Campo para gênero-->
+                <label for="genero">Gênero</label><br/>
+                <select name="genero" id="genero" placeholder="Selecione o gênero com o qual se identifica" onchange="showDiv('genero_outro', this)" required>
+                    <option disabled selected value>Selecione seu gênero</option>
+                    <option value="Homem">Homem</option>
+                    <option value="Mulher">Mulher</option>
+                    <option value="Outro">Outro</option>
+                    <option value="Prefiro_nao">Prefiro não responder</option>
+                </select>
+            </div>
+
             <div id="genero_outro" class="input-field">
                 <!--Campo para Especificar Gênero-->
                 <label for="outro_gen">Qual gênero você se identifica?</label><br/>
                 <input id="outro_gen" type="text" name="outro_gen" placeholder="Especifique">
+            </div>
+
+            <div class="input-field">
+                <!--Campo para Etnia-->
+                <label for="etnia">Cor ou Raça</label><br/>
+                <select name="etnia" id="etnia" placeholder="Selecione sua etnia" required>
+                    <option disabled selected value>Selecione sua etnia</option>
+                    <option value="Branca">Branca</option>
+                    <option value="Preta">Preta</option>
+                    <option value="Parda">Parda</option>
+                    <option value="Indígena">Indígena</option>
+                    <option value="Amarela">Amarela</option>
+                </select>
             </div>
 
             <div class="input-field">
@@ -245,9 +246,6 @@
             <div class="input-field">
                 <!--Campo para Apoio financeiro-->
                 <label for="apoio_finan">Você tem o apoio financeiro de alguém que confie? Essas pessoas moram próximo a você?</label><br/>
-            </div>
-
-            <div class="select-field">
                 <INPUT type="radio" name="opcao_apoio_financeiro" value="op1"> Não tenho apoio
                 <INPUT type="radio" name="opcao_apoio_financeiro" value="op2"> Sim, moram próximos
                 <INPUT type="radio" name="opcao_apoio_financeiro" value="op2"> Sim, moram longe
@@ -255,10 +253,7 @@
 
             <div class="input-field">
                 <!--Campo para rede de telefone-->
-                <label for="possui_rede_celular">A propriedade em que reside tem rede de telefone celular?</label>
-            </div>
-
-            <div class = "select-field">
+                <label for="possui_rede_celular">A propriedade em que reside tem rede de telefone celular?</label><br/>
                 <INPUT type="radio" name="opcao_rede_celular" value="op1"> Sim
                 <INPUT type="radio" name="opcao_rede_celular" value="op2"> Não
             </div>
@@ -271,10 +266,7 @@
 
             <div class="input-field">
                 <!--Campo para Filhos-->
-                <label for="filhos">Possui filhos?</label>
-            </div>
-
-            <div  class= "select-field">
+                <label for="filhos">Possui filhos?</label><br/>
                 <INPUT id="opcao_filho_sim" type="radio" name="opcao" value="op1" onclick="javascript:yesnoCheck();"> Sim
                 <INPUT id="opcao_filho_nao" type="radio" name="opcao" value="op2"> Não
             </div>
@@ -282,10 +274,7 @@
             <div id="se_sim" style="visibility:hidden">
                 Quantos? <input type='number' id='quantos_filhos' name='quantos_filhos'><br>
             </div>
-        </form>
 
-        <div class = "submit" >
-            <input type="submit" value="Submit" >
-        </div>
+        </form>
     </main>
 </body>
