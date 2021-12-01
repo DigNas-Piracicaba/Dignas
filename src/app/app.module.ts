@@ -7,6 +7,7 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FormularioComponent } from './formulario/formulario.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormularioComponent } from './formulario/formulario.component';
     MenuComponent,
     FooterComponent,
     HomeComponent,
-    FormularioComponent
+    FormularioComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
