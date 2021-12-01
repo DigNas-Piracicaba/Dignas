@@ -44,7 +44,7 @@ main.container {
 
 }
 
-.input-field {
+.input-field-dados-principais {
     background: transparent;
     position: relative;
     margin-bottom: 10px;
@@ -52,6 +52,13 @@ main.container {
     border-radius: 10px;
 }
 
+.input-field {
+    background: transparent;
+    position: relative;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+}
 .select-field {
     position: relative;
     margin-bottom: 10px;
