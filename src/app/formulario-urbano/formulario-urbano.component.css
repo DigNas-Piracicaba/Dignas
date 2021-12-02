@@ -8,8 +8,7 @@
 }
 
 body {
-    /*background-color: #FEE2CA;*/
-    background-color:  #FEE2CA;
+    background-color: #FEE2CA;
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
@@ -18,41 +17,22 @@ body {
 }
 
 .header {
+    background-color: #FEE2CA;
     padding-top: 2rem;
     margin-bottom: 2rem;
-    margin-left: 1.5rem;
 }
 
 main.container {
-    background-color: #fdf5e6;
     box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
-    margin-left: 7rem;
-    margin-right: 7rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    border-radius: 10px;
-}
-
-.submit{
-    margin-right: 1.0rem;
+    max-width: 450px;
 }
 
 .form {
+    background: rgba(255, 255, 255, 0);
     border-radius: 8px;
-    margin-left: 1.5rem;
-    margin-right: 0.5rem;
-
 }
 
 .input-field {
-    background: transparent;
-    position: relative;
-    margin-bottom: 10px;
-    font-weight: bold;
-    border-radius: 10px;
-}
-
-.select-field {
     position: relative;
     margin-bottom: 10px;
 }
