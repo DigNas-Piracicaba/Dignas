@@ -16,15 +16,59 @@ border-radius: 2px;
 
 .bg-contorno{
 height: 530px;
-
 margin-left: 30px;
 margin-top:-30px;
-/* orange clean */
 
 background: #FEE2CA;
 border-radius: 2px;
 }
 
+@media (max-width: 600px)
+{
+  .contorno{
+    height: 250px;
+    border: 1px solid #716D87;
+    box-sizing: border-box;
+    border-radius: 2px;
+  }
+    
+  .bg-contorno{
+    height: 250px;  
+    margin-left: 30px;
+    margin-top:-30px;
+
+    background: #FEE2CA;
+    border-radius: 2px;
+  }
+
+  .nav-item{
+    width: 100%;
+  }
+
+  .btn-resp{
+    width: 100%;
+  }
+}
+@media (min-width: 2000px)
+{
+  .contorno{
+    height: 900px;
+    border: 1px solid #716D87;
+    box-sizing: border-box;
+    border-radius: 2px;
+    }
+    
+    .bg-contorno{
+    height: 900px;
+    margin-left: 30px;
+    margin-top:-30px;
+    
+    background: #FEE2CA;
+    border-radius: 2px;
+    }
+
+    
+}
 
 
 .teste{
