@@ -1,12 +1,12 @@
 <div class="container-fluid ">
 
-  <div class="row container-fluid d-flex justify-content-center ">
+  <div class="row container-fluid d-flex justify-content-center m-0  ">
 
     <div class= "col-md-6  ">
-      <div class=" mt-3 d-flex justify-content-center"> 
-        <a href="" class="m-3 btn txt-color">Ações do Dignas</a>
-        <a href="" class="m-3 btn txt-color">Denuncias Ocultas*</a>
-        <a href="" class="m-3 btn   btn-color">Denuncie aqui</a>
+      <div class=" mt-0 mt-3 d-flex justify-content-center"> 
+        <a href="" class=" btn txt-color">Ações do Dignas</a>
+        <a routerLink='/landing-page' class=" btn txt-color">Denuncias Ocultas*</a>
+        <a routerLink='/formulario' class=" btn   btn-color">Denuncie aqui</a>
       </div>
       <div class="row d-flex justify-content-center mt-5  mb-5"> 
         <img class="img1" src="https://i.imgur.com/3vRUyyq.png" alt="">
@@ -18,27 +18,26 @@
       <div class="row d-flex justify-content-center m-5 ">
         <div class ="col-md-10  contorno  p-0 ">
            <div class=" col-md-12    bg-contorno mb-3 row d-flex justify-content-center">
-             <img class="img-fluid" src="https://i.imgur.com/PgO5ZGy.png" alt="">
+             <img class="img" height=100% src="https://i.imgur.com/PgO5ZGy.png" alt="">
             </div>
         </div>
       </div>
     </div> 
-
   </div>
   
 
   <div class="container d-flex justify-content-center mb-5">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
         <div class="tab-regular">
-            <ul class="nav nav-tabs fonte-botton" id="myTab" role="tablist">
+            <ul class="nav nav-tabs fonte-botton " id="myTab" role="tablist">
+                <li class="nav-item " role="presentation"> 
+                  <button class="nav-link active btn-resp " id="home-tab" data-bs-toggle="tab" type="button" role="tab" aria-controls="home" aria-selected="true" data-bs-target="#home">Rede<br>de apoio</button> </li>
                 <li class="nav-item" role="presentation"> 
-                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" type="button" role="tab" aria-controls="home" aria-selected="true" data-bs-target="#home">Rede<br>de apoio</button> </li>
+                  <button class="nav-link btn-resp" id="profile-tab" data-bs-toggle="tab"type="button" role="tab" aria-controls="profile" aria-selected="false" data-bs-target="#profile">Cursos<br>Profissionalizantes</button> </li>
+                <li class="nav-item " role="presentation"> 
+                  <button class="nav-link   btn-resp" id="contact-tab" data-bs-toggle="tab" type="button " role="tab" aria-controls="contact" aria-selected="false" data-bs-target="#contact">Conscientização<br><br>  </button> </li>
                 <li class="nav-item" role="presentation"> 
-                  <button class="nav-link " id="profile-tab" data-bs-toggle="tab"type="button" role="tab" aria-controls="profile" aria-selected="false" data-bs-target="#profile">Cursos<br>Profissionalizantes</button> </li>
-                <li class="nav-item darkblue" role="presentation"> 
-                  <button class="nav-link " id="contact-tab" data-bs-toggle="tab" type="button " role="tab" aria-controls="contact" aria-selected="false" data-bs-target="#contact">Conscientização<br><br>  </button> </li>
-                <li class="nav-item" role="presentation"> 
-                  <button class="nav-link" id="test-tab" data-bs-toggle="tab" type="button" role="tab" aria-controls="test" aria-selected="false" data-bs-target="#test">Feed<br>de Vagas</button> </li>
+                  <button class="nav-link btn-resp" id="test-tab" data-bs-toggle="tab" type="button" role="tab" aria-controls="test" aria-selected="false" data-bs-target="#test">Feed<br>de Vagas</button> </li>
             </ul>
 
             <div class="tab-content" id="myTabContent">
@@ -79,4 +78,4 @@
     </div>    
   </div>
 
-</div>
+
