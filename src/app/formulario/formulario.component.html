@@ -104,7 +104,7 @@
                     <div class="input-field" >
                         <!--Campo para CEP-->
                         <label for="cep">CEP</label><br/>
-                        <input id="cep" type="number" name="cep" placeholder="Insira seu CEP" required/>
+                        <input id="cep" type="number" name="cep" placeholder="Insira seu CEP">required/>
                     </div>
 
                     <div class="input-field">
@@ -256,11 +256,11 @@
                 </div>
 
                 <div  class= "select-field">
-                    <INPUT id="opcao_filho_sim" type="radio" name="opcao" value="op1" onclick="javascript:yesnoCheck();"> Sim
-                    <INPUT id="opcao_filho_nao" type="radio" name="opcao" value="op2"> Não
+                    <INPUT id="opcao_filho_sim" type="radio" name="opcao" value="op1" (click)="toggleShow()"> Sim
+                    <INPUT id="opcao_filho_nao" type="radio" name="opcao" value="op2" (click)="toggleShow()"> Não
                 </div>
 
-                <div id="se_sim" style="visibility:hidden">
+                <div id="se_sim" *ngIf="isShown">
                     Quantos? <input type='number' id='quantos_filhos' name='quantos_filhos'><br>
                 </div>
             </fieldset>
