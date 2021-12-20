@@ -94,6 +94,36 @@
                             <option value="Amarela">Amarela</option>
                         </select>
                     </div>
+
+                    <div class="input-field">
+                        <!--Campo para Estado Civil-->
+                        <label for="estado_civil">Estado Civil</label><br/>
+                        <select name="estado_civil" id="estado_civil" placeholder="Selecione seu estado civil" required>
+                            <option disabled selected value>Selecione seu estado civil</option>
+                            <option value="Solteir">Solteira(o)</option>
+                            <option value="Casad">Casada(o)</option>
+                            <option value="Separad">Separada(o)</option>
+                            <option value="Divorciad">Divorciada(o)</option>
+                            <option value="Viuv">Viuva(o)</option>
+                            <option value="UniaoEst">União Estável</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-field">
+                        <!--Campo para Escolaridade-->
+                        <label for="escolaridade">Grau de escolaridade</label><br/>
+                        <select name="escolaridade" id="escolaridade" placeholder="Selecione sua escolaridade" required>
+                            <option disabled selected value>Selecione sua escolaridade</option>
+                            <option value="Fund_Incom">Ensino fundamental incompleto</option>
+                            <option value="Fund_Com">Ensino fundamental completo</option>
+                            <option value="Medio_Incom">Ensino médio incompleto</option>
+                            <option value="Medio_Cursan">Ensino médio em andamento</option>
+                            <option value="Medio_Com">Ensino médio completo</option>
+                            <option value="Superior_Incomp">Ensino superior incompleto</option>
+                            <option value="Superior_Curs">Ensino superior em andamento</option>
+                            <option value="Superior_Comp">Ensino superior completo</option>
+                        </select>
+                    </div>
             </fieldset>
 
             <!--Caixa para endereço -->
@@ -104,7 +134,7 @@
                     <div class="input-field" >
                         <!--Campo para CEP-->
                         <label for="cep">CEP</label><br/>
-                        <input id="cep" type="number" name="cep" placeholder="Insira seu CEP">required/>
+                        <input id="cep" type="number" name="cep" placeholder="Insira seu CEP"required/>
                     </div>
 
                     <div class="input-field">
@@ -164,70 +194,51 @@
                         <label for="complemento">Complemento</label><br/>
                         <input id="complemento" type="text" name="complemento" placeholder="Insira o complemento da sua residência" required/>
                     </div>
-
-                    <div class="input-field">
-                        <!--Campo para Número da casa-->
-                        <label for="dist_cidade">Em média qual é a distância da sua moradia até a cidade?</label><br/>
-                        <input id="dist_cidade" type="number" name="dist_cidade" placeholder="Distância até a cidade" required/>
-                    </div>
                     
             </fieldset>
 
             <!--Caixa para contato -->
             <fieldset class="fieldset-border">
             <legend class="legend-border">Contato</legend>
-
+                
                 <div class="input-field">
-                    <!--Campo para Telefone-->
-                    <label for="telefone">Telefone</label><br/>
-                    <input id="telefone" type="tel" name="telefone" placeholder="Insira seu telefone">
+                    <label for="celular">Possui Celular?</label>
+                </div>
+
+                <div  class= "select-field">
+                    <INPUT id="opcao_celular_sim" type="radio" name="opcao" value="op1"  (click)="toggleShowT2()"> Sim
+                    <INPUT id="opcao_celular_nao" type="radio" name="opcao" value="op2"  (click)="toggleShowF2()"> Não
+                </div>
+
+                <div id="se_sim" *ngIf="isShown2">
+                    <input id="celular" type="tel" name="celular" placeholder="Insira seu número de celular"><br/>
                 </div>
 
                 <div class="input-field">
                     <!--Campo para Celular-->
-                    <label for="celular">Celular</label><br/>
-                    <input id="celular" type="tel" name="celular" placeholder="Insira seu número de celular">
+                    <label for="celularEmergencia">Celular para emergência (alguém que confie)</label><br/>
+                    <input id="celularEmgergencia" type="tel" name="celular" placeholder="Insira o número de emergência">
                 </div>
 
                 <div class="input-field">
-                    <!--Campo para E-mail-->
-                    <label for="email">Email</label><br/>
-                    <input id="email" type="email" name="email" placeholder="Insira seu e-mail" required>
+                    <label for="celular">Possui E-mail?</label>
                 </div>
+
+                <div  class= "select-field">
+                    <INPUT id="opcao_email_sim" type="radio" name="opcao" value="op1" (click)="toggleShowT2()"> Sim
+                    <INPUT id="opcao_email_nao" type="radio" name="opcao" value="op2" (click)="toggleShowF2()"> Não
+                </div>
+
+                <div id="se_sim" *ngIf="isShown2">
+                    <input id="email" type="text" name="email" placeholder="Insira o seu E-mail"><br/>
+                </div>
+
             </fieldset>
 
 
              <!--Caixa para informações pessoais -->
             <fieldset class="fieldset-border">
                 <legend class="legend-border">Informações Pessoais</legend>
-                <div class="input-field">
-                    <!--Campo para Estado Civil-->
-                    <label for="estado_civil">Estado Civil</label><br/>
-                    <select name="estado_civil" id="estado_civil" placeholder="Selecione seu estado civil" required>
-                        <option disabled selected value>Selecione seu estado civil</option>
-                        <option value="Solteir">Solteira(o)</option>
-                        <option value="Casad">Casada(o)</option>
-                        <option value="Separad">Separada(o)</option>
-                        <option value="Divorciad">Divorciada(o)</option>
-                        <option value="Viuv">Viuva(o)</option>
-                    </select>
-                </div>
-
-                <div class="input-field">
-                    <!--Campo para Escolaridade-->
-                    <label for="escolaridade">Grau de escolaridade</label><br/>
-                    <select name="escolaridade" id="escolaridade" placeholder="Selecione sua escolaridade" required>
-                        <option disabled selected value>Selecione sua escolaridade</option>
-                        <option value="Fund_Incom">Ensino fundamental incompleto</option>
-                        <option value="Fund_Com">Ensino fundamental completo</option>
-                        <option value="Medio_Incom">Ensino médio incompleto</option>
-                        <option value="Medio_Cursan">Ensino médio em andamento</option>
-                        <option value="Medio_Com">Ensino médio completo</option>
-                        <option value="Superior_Incomp">Ensino superior incompleto</option>
-                        <option value="Superior_Curs">Ensino superior em andamento</option>
-                        <option value="Superior_Comp">Ensino superior completo</option>
-                    </select>
-                </div>
 
                 <div class="input-field">
                     <!--Campo para Apoio financeiro-->
@@ -241,13 +252,22 @@
                 </div>
 
                 <div class="input-field">
-                    <!--Campo para rede de telefone-->
-                    <label for="possui_rede_celular">A propriedade em que reside tem rede de telefone celular?</label>
+                    <!--Campo para Transporte Público-->
+                    <label for="Transporte_publico">Existe Linha de transporte público próximo a sua residência, se sim qual a frequência?</label>
                 </div>
 
-                <div class = "select-field">
-                    <INPUT type="radio" name="opcao_rede_celular" value="op1"> Sim
-                    <INPUT type="radio" name="opcao_rede_celular" value="op2"> Não
+                <div  class= "select-field">
+                    <INPUT id="opcao_transp_publico_sim" type="radio" name="opcao" value="op1" (click)= "toggleShowT5()" > Sim
+                    <INPUT id="opcao_transp_publico_nao" type="radio" name="opcao" value="op2" (click)= "toggleShowF5()"> Não
+                </div>
+
+                <div id="se_sim" *ngIf="isShown5" class= "select-field">
+                    Qual a frequência que ele passa? <input type='number' id='freq_transp_publico' name='freq_transp_publico'  placeholder="Qual a frequência que ele passa?"><br>
+                </div>
+
+                <div class="input-field">
+                    <label for="distancia_cidade">Em média qual é a distância da sua moradia até a cidade?</label><br>
+                    <input id="distancia_cidade" type="text" name="distancia_cidade" placeholder="Insira a distância de sua moradia até a cidade"required/>
                 </div>
 
                 <div class="input-field">
@@ -256,12 +276,129 @@
                 </div>
 
                 <div  class= "select-field">
-                    <INPUT id="opcao_filho_sim" type="radio" name="opcao" value="op1" (click)="toggleShow()"> Sim
-                    <INPUT id="opcao_filho_nao" type="radio" name="opcao" value="op2" (click)="toggleShow()"> Não
+                    <INPUT id="opcao_filho_sim" type="radio" name="opcao" value="op1" (click)= "toggleShowT3()" > Sim
+                    <INPUT id="opcao_filho_nao" type="radio" name="opcao" value="op2" (click)= "toggleShowF3()"> Não
                 </div>
 
-                <div id="se_sim" *ngIf="isShown">
-                    Quantos? <input type='number' id='quantos_filhos' name='quantos_filhos'><br>
+                <div id="se_sim" *ngIf="isShown3" class= "select-field">
+                    Quantos? <input type='number' id='quantos_filhos' name='quantos_filhos'  placeholder="Insira o número de filhos"><br>
+                </div>
+
+                <div class="input-field">
+                    <!--Campo para trabalho-->
+                    <label for="trabalho">Você trabalha atualmente?</label>
+                </div>
+
+                <div  class= "select-field">
+                    <INPUT id="opcao_trabalho_sim" type="radio" name="opcao" value="op1" (click)="toggleShowT4()"> Sim
+                    <INPUT id="opcao_trabalho_nao" type="radio" name="opcao" value="op2" (click)= "toggleShowF4()"> Não
+                </div>
+
+                <div id="se_sim" *ngIf="isShown4" class= "select-field">
+                    Qual o nome da empresa? <input id="nome_empresa" type="text" name="nome_empresa" placeholder="Insira o nome da empresa">
+                </div>
+
+                <div class="input-field">
+                    <label for="negocioproprio">Possui Negócio Próprio?</label>
+                </div>
+
+                <div  class= "select-field">
+                    <INPUT id="opcao_negocioproprio_sim" type="radio" name="opcao" value="op1" > Sim
+                    <INPUT id="opcao_negocioproprio_nao" type="radio" name="opcao" value="op2" > Não
+                </div>
+
+                <div class="input-field">
+                    <label for="agresssor">Por quem você se sente ameaçada?</label><br>
+                    <input id="agresssor" type="text" name="agressor" placeholder="Insira nome e relação com o agressor"required/>
+                </div>
+
+                <div class="input-field">
+                    <label for="dependenteagressor">Você se considera dependente financeiramente do autor da violência?</label>
+                </div>
+
+                <div  class= "select-field">
+                    <INPUT id="opcao_dependenteagressor_sim" type="radio" name="opcao" value="op1" > Sim
+                    <INPUT id="opcao_dependenteagressor_nao" type="radio" name="opcao" value="op2" > Não
+                </div>
+
+                <div class="input-field" >
+                    <!--Campo para gênero-->
+                    <label for="VoceJa">Você já?</label><br/>
+                    <select name="VoceJa" id="VoceJa" placeholder="Selecione uma ou mais opções" multiple required>
+                        <option disabled selected value>Selecione uma opção</option>
+                        <option value="SAgressaoAuto">Sofreu alguma agressão física do autor</option>
+                        <option value="OfendidaHumilhada">Foi ofendida ou humilhada de alguma forma pelo autor</option>
+                        <option value="DinheiroDocumentosControlados">Teve seu dinheiro e documentos controlados pelo autor</option>
+                        <option value="TodasAnteriores">Todas as opções anteriores</option>
+                        <option value="NenhumaDasAnteriores">Nenhuma das opções anteriores</option>
+                    </select>
+                </div>
+
+                <div class="input-field">
+                    <label for="ExisteAtendimentoMulher">Próximo a você existe algum serviço de atendimento à mulher?</label>
+                </div>
+
+                <div  class= "select-field">
+                    <INPUT id="opcao_ExisteAtendimentoMulher_Sim" type="radio" name="opcao" value="op1" > Sim
+                    <INPUT id="opcao_ExisteAtendimentoMulher_Nao" type="radio" name="opcao" value="op2" > Não
+                    <INPUT id="opcao_ExisteAtendimentoMulher_NaoSei" type="radio" name="opcao" value="op2" > Não Sei
+                </div>
+
+                <div  class="input-field">
+                    <!--Campo para Data de Nascimento-->
+                    <label for="InicioAgressoes">Quando essas agressões se iniciaram?</label><br/>
+                    <input id="InicioAgressoes" type="date" name="dataNascimento" required>
+               </div>
+
+               <div class="input-field">
+                    <label for="JaRegistrouOcorrencia">Já registrou ocorrências policiais anteriormente envolvendo essa mesma pessoa?</label>
+                </div>
+
+                <div  class= "select-field">
+                    <INPUT id="opcao_JaRegistrouOcorrencia_sim" type="radio" name="opcao" value="op1" > Sim
+                    <INPUT id="opcao_JaRegistrouOcorrencia_nao" type="radio" name="opcao" value="op2" > Não
+                </div>
+
+                <div class="input-field">
+                    <label for="AmeacasAgressoesMaisFrequentesUltimosMeses">As ameaças ou agressões físicas têm se tornado mais frequentes ou mais graves nos últimos meses?</label>
+                </div>
+
+                <div  class= "select-field">
+                    <INPUT id="opcao_AmeacasAgressoesMaisFrequentesUltimosMeses_sim" type="radio" name="opcao" value="op1" > Sim
+                    <INPUT id="opcao_AmeacasAgressoesMaisFrequentesUltimosMeses_nao" type="radio" name="opcao" value="op2" > Não
+                </div>
+
+                <div class="input-field">
+                    <label for="AtosSexuaisContraVontade">O autor já obrigou você a fazer sexo ou praticar atos sexuais sem sua vontade?</label>
+                </div>
+
+                <div  class= "select-field">
+                    <INPUT id="opcao_AtosSexuaisContraVontade_sim" type="radio" name="opcao" value="op1" > Sim
+                    <INPUT id="opcao_AtosSexuaisContraVontade_nao" type="radio" name="opcao" value="op2" > Não
+                </div>
+
+                <div class="input-field">
+                    <label for="AtorAcessoArmaFogo">O autor tem acesso a arma de fogo?</label>
+                </div>
+
+                <div  class= "select-field">
+                    <INPUT id="opcao_AtorAcessoArmaFogo_sim" type="radio" name="opcao" value="op1" > Sim
+                    <INPUT id="opcao_AtorAcessoArmaFogo_nao" type="radio" name="opcao" value="op2" > Não
+                </div>
+
+                <div class="input-field">
+                    <!--Campo para Complemento da casa-->
+                    <label for="HoraLocalMaisFrequentesDaAgressao">Qual a hora e o local mais frequentes da violência?</label><br/>
+                    <input id="HoraLocalMaisFrequentesDaAgressao" type="text" name="HoraLocalMaisFrequentesDaAgressao" placeholder="Insira a hora e o local mais frequentes da violência" required/>
+                </div>
+
+                <div class="input-field">
+                    <label for="AmeacaGraveLetal">Você acha que o agressor pode te machucar fisicamente de uma maneira grave e até letal?</label>
+                </div>
+
+                <div  class= "select-field">
+                    <INPUT id="opcao_AmeacaGraveLetal_sim" type="radio" name="opcao" value="op1" > Sim
+                    <INPUT id="opcao_AmeacaGraveLetal_nao" type="radio" name="opcao" value="op2" > Não
                 </div>
             </fieldset>
 
