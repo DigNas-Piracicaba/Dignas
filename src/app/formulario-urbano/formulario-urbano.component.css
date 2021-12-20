@@ -8,7 +8,8 @@
 }
 
 body {
-    background-color: #FEE2CA;
+    /*background-color: #FEE2CA;*/
+    background-color:  #FEE2CA;
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
@@ -17,24 +18,84 @@ body {
 }
 
 .header {
-    background-color: #FEE2CA;
     padding-top: 2rem;
     margin-bottom: 2rem;
+    margin-left: 1.5rem;
 }
 
 main.container {
+    background-color: #fdf5e6;
     box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
-    max-width: 450px;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+
+.submit{
+    margin-left: 40.0rem;
+    margin-bottom: 4.0rem;
 }
 
 .form {
-    background: rgba(255, 255, 255, 0);
     border-radius: 8px;
+    margin-left: 1.5rem;
+    margin-right: 0.5rem;
+
 }
 
-.input-field {
+.input-field-dados-principais {
+    background: transparent;
     position: relative;
     margin-bottom: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.esqdir{
+    background: transparent;
+    position: relative;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    display: flex;
+    border: 1px solid grey;
+} 
+
+
+.fieldset-border {
+    border: 1px solid gray !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .fieldset-border .legend-border {
+    font-size: 1.2em !important;
+    text-align: left !important;
+    width: auto;
+    padding: 0 10px;
+    border-bottom: none;
+  }
+
+.input-field {
+    background: transparent;
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.select-field {
+    background: transparent;
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
 }
 
 input[type=number]::-webkit-inner-spin-button {
